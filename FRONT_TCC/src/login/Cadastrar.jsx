@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../assets/imagens/logo.png'
 import { Link } from 'react-router-dom'
-function Tela_login() {
+function Cadastrar() {
     const tela = { 
         backgroundColor: "#67a08f", 
         minHeight: "100vh", 
@@ -62,8 +62,8 @@ function Tela_login() {
         transition: "0.3s" 
     }
     const texto_inferior = { 
-        marginTop: "20px", 
-        textAlign: "center", 
+        marginTop: "20px",
+        textAlign: "end", 
         color: "#769283", 
         fontSize: "14px" 
     }
@@ -84,7 +84,6 @@ function Tela_login() {
         alignSelf: "center", 
         marginBottom:"-100px",
         marginTop:"-50px"
-        // marginBottom: "10px" 
     }
     return (
         <div style={tela}>
@@ -94,29 +93,38 @@ function Tela_login() {
                     alt="Logo" 
                     style={logo_estilo}
                 />  
-                <h1 style={titulo}>Bem-vindo</h1>
+                <h1 style={titulo}>Crie uma conta</h1>
                 <form action={''} method="POST" encType="multipart/form-data">
                     <fieldset style={fieldset}>
                         <label style={label}>
-                            Usuário:
                             <div style={area_input}>
-                                <FontAwesomeIcon icon="fa-regular fa-envelope" style={{color: "#97bf8a",}} />                                <input type="text" name="usuario" style={input} placeholder='usuario@gmail.com'/>
+                                <FontAwesomeIcon icon="fa-regular fa-user" style={{color: "#97bf8a",}} />
+                                <input type="text" name="nome" style={input} placeholder='Digite seu nome'/>
                             </div>
                         </label>
                         <label style={label}>
-                            Senha:
+                            <div style={area_input}>
+                                <FontAwesomeIcon icon="fa-regular fa-envelope" style={{color: "#97bf8a",}} />
+                                <input type='email' name='email' style={input} placeholder='Email'/>
+                            </div>
+                        </label>
+                        <label style={label}>
                             <div style={area_input}>
                                 <FontAwesomeIcon icon="fa-solid fa-lock" style={{color: "#97bf8a",}} />
                                 <input type="password" name="senha" style={input} placeholder='digite sua senha'/>
                             </div>
                         </label>
-                        <button type="submit" style={botao}>Enviar</button>
+                        <label style={label}>
+                            <div style={area_input}>
+                                <FontAwesomeIcon icon="fa-solid fa-lock" style={{color: "#97bf8a",}} />
+                                <input type="password" name="senha_confirm" style={input} placeholder='Confirme sua senha'/>
+                            </div>
+                        </label>
+                        <button type="submit" style={botao}>Cadastrar</button>
                     </fieldset>
                 </form>
-                <Link style={texto_inferior} to='/Cadastrar'> Não possui conta? Cadastre-se </Link>
             </div>
         </div>
     )
 }
-
-export default Tela_login
+export default Cadastrar
