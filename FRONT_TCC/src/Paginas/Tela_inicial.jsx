@@ -12,6 +12,12 @@ function Tela_inicial(){
             <div>
                 <MenuSuperior></MenuSuperior>
                 <MenuLateral></MenuLateral>
+                {/* <Icone 
+                    icon = {<FontAwesomeIcon icon="fa-solid fa-pills" style={{color: "#9ca3af",}}/>}
+                    href =""
+                 >
+                    Medicamentos
+                </Icone> */}
             </div>
         </div>
     )
