@@ -7,7 +7,7 @@ function MenuSuperior() {
         boxSizing: "border-box",
         backgroundColor:"#ffffff",
         borderBottom: "1px solid #E5E7EB",
-        boxShadow: "0px 8px 25px rgba(86, 86, 86, 0.12)", 
+        boxShadow: "0px 8px 20px rgba(86, 86, 86, 0.12)", 
     }   
     const divSuperior = {
         display:"flex",
@@ -18,12 +18,11 @@ function MenuSuperior() {
         alignItems:"center",
         minWidth:"55%",
         justifyContent:"space-between",
-        
     }
     const divMeio = {
         display:"flex",
         justifyContent:"end",
-        minWidth:"88%",
+        minWidth:"80%",
     }
     const divUsuario = {
         display:"flex",
@@ -35,9 +34,8 @@ function MenuSuperior() {
         border: "none"
     }
     const logo_estilo = { 
-        maxWidth: "150px", 
-        maxHeight: "120px",
-        
+        maxWidth: "160px", 
+        maxHeight: "130px",
     }
     const area_input = { 
         display: "flex", 
@@ -50,7 +48,7 @@ function MenuSuperior() {
         boxSizing: "border-box" 
     }
     const input = { 
-        width: "100%",  
+        width: "90%",  
         padding: "10px 10px 10px 0px",
         border: "none", 
         outline: "none", 
@@ -61,6 +59,11 @@ function MenuSuperior() {
         display:"flex",
         justifyContent:"end"
     }
+    const p = {
+        color:"#065B3A",
+        fontWeight:"bold",
+        fontSize:"20px"
+    }
     return(
         <div style={menuSuperior}>
             <div style={divSuperior}>
@@ -69,6 +72,7 @@ function MenuSuperior() {
                     alt="Logo" 
                     style={logo_estilo}
                 />
+                <p style={p}>Adherence Care</p>
                 <div style={divMeio}>
                     <div style={divAlinhaUsuario}>
                         <div style={area_input}>
