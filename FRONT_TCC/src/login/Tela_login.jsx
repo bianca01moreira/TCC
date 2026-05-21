@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../assets/imagens/logo.png'
 import { Link } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 function Tela_login() {
     const tela = { 
         backgroundColor: "#67a08f", 
@@ -83,9 +84,13 @@ function Tela_login() {
         objectFit: "contain", 
         alignSelf: "center", 
         marginBottom:"-100px",
-        marginTop:"-50px"
-        // marginBottom: "10px" 
+        marginTop:"-50px" 
     }
+    const navigate = useNavigate();
+
+    const Entrar = () =>{
+        navigate('/Principal');
+    };
     return (
         <div style={tela}>
             <div style={card_login}>   
@@ -110,7 +115,7 @@ function Tela_login() {
                                 <input type="password" name="senha" style={input} placeholder='digite sua senha'/>
                             </div>
                         </label>
-                        <button type="submit" style={botao}>Enviar</button>
+                        <button type="button" name='botaoEntrar' style={botao} onClick={Entrar}>Enviar</button>
                     </fieldset>
                 </form>
                 <Link style={texto_inferior} to='/Cadastrar'> Não possui conta? Cadastre-se </Link>
