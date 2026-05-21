@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../assets/imagens/logo.png'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 function Cadastrar() {
     const tela = { 
         backgroundColor: "#67a08f", 
@@ -85,6 +86,11 @@ function Cadastrar() {
         marginBottom:"-100px",
         marginTop:"-50px"
     }
+    const navigate = useNavigate();
+
+    const Entrar = () =>{
+        navigate('/Principal');
+    };
     return (
         <div style={tela}>
             <div style={card_login}>   
@@ -120,7 +126,7 @@ function Cadastrar() {
                                 <input type="password" name="senha_confirm" style={input} placeholder='Confirme sua senha'/>
                             </div>
                         </label>
-                        <button type="submit" style={botao}>Cadastrar</button>
+                        <button type="button" name="botaoCadastrar" style={botao} onClick={Entrar}>Cadastrar</button>
                     </fieldset>
                 </form>
             </div>
