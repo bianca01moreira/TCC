@@ -65,17 +65,24 @@ function MenuSuperior() {
     const p = {
         color:"#065B3A",
         fontWeight:"bold",
-        fontSize:"20px"
+        fontSize:"25px"
+    }
+    const divLogo = {
+        display:"flex",
+        width:"18%",
+        alignItems:"center",
     }
     return(
         <div style={menuSuperior}>
             <div style={divSuperior}>
-                <img
-                    src={logo}
-                    alt="Logo" 
-                    style={logo_estilo}
-                />
-                <p style={p}>Adherence Care</p>
+                <div style={divLogo}>
+                    <img
+                        src={logo}
+                        alt="Logo" 
+                        style={logo_estilo}
+                    />
+                    <p style={p}>Adherence Care</p>
+                </div>
                 <div style={divMeio}>
                     <div style={divAlinhaUsuario}>
                         <div style={area_input}>
