@@ -1,0 +1,24 @@
+.botaoMenuLateral{
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botaoMenuLateral:hover {
+    background-color: #E2EEE7;
+    padding: 4%;
+    padding-left: 8%;
+    width: 180px;
+    color:#0A684C
+}
+
+.botaoMenuLateral:hover .iconeMenu{
+    color: #0A684C ;
+}
+
+.iconeMenu {
+    color: #9CA3AF
+}
+
