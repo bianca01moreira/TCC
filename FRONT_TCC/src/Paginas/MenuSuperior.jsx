@@ -3,14 +3,18 @@ import logo from '../assets/imagens/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function MenuSuperior() {
     const menuSuperior = {
-        minWidth: "90%",
-        boxSizing: "border-box",
-        backgroundColor:"#ffffff",
-        boxShadow: "0px 8px 20px rgba(86, 86, 86, 0.12)", 
+        // minWidth: "100vh",
+        // boxSizing: "border-box",
+        // backgroundColor:"#ffffff",
+        // boxShadow: "0px 8px 20px rgba(86, 86, 86, 0.12)", 
     }   
     const divSuperior = {
         display:"flex",
         alignItems:"center",
+        minWidth: "100vh",
+        boxSizing: "border-box",
+        backgroundColor:"#ffffff",
+        boxShadow: "0px 8px 20px rgba(86, 86, 86, 0.12)", 
     }
     const divAlinhaUsuario ={
         display:"flex",
