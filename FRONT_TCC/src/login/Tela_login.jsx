@@ -89,7 +89,7 @@ function Tela_login() {
     const navigate = useNavigate();
 
     const Entrar = () =>{
-        navigate('/Principal');
+        navigate('/VisaoGeral');
     };
     return (
         <div style={tela}>
