@@ -89,7 +89,7 @@ function Cadastrar() {
     const navigate = useNavigate();
 
     const Entrar = () =>{
-        navigate('/Principal');
+        navigate('/VisaoGeral');
     };
     return (
         <div style={tela}>
