@@ -8,20 +8,20 @@ const botao = {
     border:"none"
 }
 const divPrincipal = {
+    width:"250px",
     minHeight:"80vh",
     display:"flex",
     justifyContent:"space-between",
-    width:"13%",
+    width:"100%",
     padding:"5px",
     backgroundColor:"#ffff",
     boxShadow: "0px 8px 20px rgba(86, 86, 86, 0.12)", 
 }
 const divSecundaria = {
     display:"flex",
-    minHeight:"50vh",
     flexDirection:"column",
-    justifyContent:"space-between",
-    padding:"8%"
+    gap:"25px",
+    padding:"20px 10px"
 }
 
 const link = {

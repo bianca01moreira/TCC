@@ -4,14 +4,13 @@ import MenuLateral from "./MenuLateral"
 function VisaoGeral(){
     
     const tela = {
-        backgroundColor: "#FFFFF", 
-        minHeight: "100vh", 
+        // backgroundColor: "#FFFFF", 
+        // minHeight: "50vh", 
     }
     return(
         <div style={tela}>
             <div>
-                <MenuSuperior></MenuSuperior>
-                <MenuLateral></MenuLateral>
+                <h1>Visão Geral</h1>
             </div>
         </div>
     )

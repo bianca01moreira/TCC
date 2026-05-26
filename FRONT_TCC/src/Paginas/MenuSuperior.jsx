@@ -11,7 +11,7 @@ function MenuSuperior() {
     const divSuperior = {
         display:"flex",
         alignItems:"center",
-        minWidth: "100vh",
+        width: "100%",
         boxSizing: "border-box",
         backgroundColor:"#ffffff",
         boxShadow: "0px 8px 20px rgba(86, 86, 86, 0.12)", 
@@ -25,7 +25,7 @@ function MenuSuperior() {
     const divMeio = {
         display:"flex",
         justifyContent:"end",
-        minWidth:"80%",
+        width:"80%",
     }
     const divUsuario = {
         display:"flex",
