@@ -43,13 +43,13 @@ function MenuLateral() {
                     >
                         {<FontAwesomeIcon icon="fa-solid fa-pills" className="iconeMenu" />}
                     </Botoes>
-                    <Botoes 
+                    {/* <Botoes 
                         titulo="Lembretes"
                         ativo={botaoAtivo === "Lembretes"} 
                         onClick={() => setBotaoAtivo("Lembretes")}
                     >
                         {<FontAwesomeIcon icon="fa-regular fa-bell" className="iconeMenu" />}
-                    </Botoes>
+                    </Botoes> */}
                     <Botoes 
                         titulo="Relatórios"
                         ativo={botaoAtivo === "Relatorios"} 
