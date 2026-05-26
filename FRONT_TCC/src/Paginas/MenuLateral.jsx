@@ -2,7 +2,7 @@ import { height, width } from '@fortawesome/free-brands-svg-icons/fa11ty'
 import { faDisplay } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Botoes from './Botoes.jsx'
-import { useState } from 'react'
+import { Link, useLocation } from "react-router-dom";
 const botao = {
     backgroundColor: "transparent",
     border:"none"
@@ -23,26 +23,32 @@ const divSecundaria = {
     justifyContent:"space-between",
     padding:"8%"
 }
+
+const link = {
+    textDecoration:"none"
+}
 function MenuLateral() {
-    const [botaoAtivo, setBotaoAtivo] = useState("Visão geral")
+    const location = useLocation();
     return(
         <div>
             <div style={divPrincipal}>
                 <div style={divSecundaria}>
-                    <Botoes 
-                        titulo="Visão geral"
-                        ativo={botaoAtivo === "Visão geral"} 
-                        onClick={() => setBotaoAtivo("Visão geral")}
-                    >
-                        {<FontAwesomeIcon icon="fa-solid fa-house" className="iconeMenu" />}
-                    </Botoes>
-                    <Botoes 
-                        titulo="Medicamentos"
-                        ativo={botaoAtivo === "Medicamentos"} 
-                        onClick={() => setBotaoAtivo("Medicamentos")}
-                    >
-                        {<FontAwesomeIcon icon="fa-solid fa-pills" className="iconeMenu" />}
-                    </Botoes>
+                    <Link to="/VisaoGeral" style={link}>
+                        <Botoes 
+                            titulo="Visão geral"
+                            ativo={location.pathname === "/VisaoGeral"} 
+                        >
+                            {<FontAwesomeIcon icon="fa-solid fa-house" className="iconeMenu" />}
+                        </Botoes>
+                    </Link>
+                    <Link to="/Medicamentos" style={link}>
+                        <Botoes 
+                            titulo="Medicamentos"
+                            ativo={location.pathname === "/Medicamentos"}
+                        >
+                            {<FontAwesomeIcon icon="fa-solid fa-pills" className="iconeMenu" />}
+                        </Botoes>
+                    </Link>
                     {/* <Botoes 
                         titulo="Lembretes"
                         ativo={botaoAtivo === "Lembretes"} 
@@ -50,47 +56,54 @@ function MenuLateral() {
                     >
                         {<FontAwesomeIcon icon="fa-regular fa-bell" className="iconeMenu" />}
                     </Botoes> */}
-                    <Botoes 
-                        titulo="Relatórios"
-                        ativo={botaoAtivo === "Relatorios"} 
-                        onClick={() => setBotaoAtivo("Relatorios")}
-                    >
-                        {<FontAwesomeIcon icon="fa-solid fa-chart-column" className="iconeMenu" />}
-                    </Botoes>
-                    <Botoes 
-                        titulo="Histórico"
-                        ativo={botaoAtivo === "Historico"} 
-                        onClick={() => setBotaoAtivo("Historico")}
-                    >
-                        {<FontAwesomeIcon icon="fa-solid fa-clock-rotate-left" className="iconeMenu" /> }
-                    </Botoes>
-                    <Botoes 
-                        titulo="Receitas"
-                        ativo={botaoAtivo === "Receitas"} 
-                        onClick={() => setBotaoAtivo("Receitas")}
-                    >
-                        {<FontAwesomeIcon icon="fa-solid fa-file-medical" className="iconeMenu" /> }
-                    </Botoes>
-                    <Botoes 
-                        titulo="Profissionais"
-                        ativo={botaoAtivo === "Profissionais"} 
-                        onClick={() => setBotaoAtivo("Profissionais")}
-                    >
-                        {<FontAwesomeIcon icon="fa-solid fa-user-nurse" className="iconeMenu" />}
-                    </Botoes>
-                    <Botoes 
-                        titulo="Dependentes"
-                        ativo={botaoAtivo === "Dependentes"} onClick={() => setBotaoAtivo("Dependentes")}    
-                    >
-                        {<FontAwesomeIcon icon="fa-solid fa-users" className="iconeMenu" />}
-                    </Botoes>
+                    <Link to="/Relatorios" style={link}>
+                        <Botoes 
+                            titulo="Relatórios"
+                            ativo={location.pathname === "/Relatorios"}
+                        >
+                            {<FontAwesomeIcon icon="fa-solid fa-chart-column" className="iconeMenu" />}
+                        </Botoes>
+                    </Link>
+                    <Link to="/Historico" style={link}>
+                        <Botoes 
+                            titulo="Histórico"
+                            ativo={location.pathname === "/Historico"}
+                        >
+                            {<FontAwesomeIcon icon="fa-solid fa-clock-rotate-left" className="iconeMenu" /> }
+                        </Botoes>
+                    </Link>
+                    <Link to="/Receitas" style={link}>
+                        <Botoes 
+                            titulo="Receitas"
+                            ativo={location.pathname === "/Receitas"}
+                        >
+                            {<FontAwesomeIcon icon="fa-solid fa-file-medical" className="iconeMenu" /> }
+                        </Botoes>
+                    </Link>
+                    <Link to="/Profissionais" style={link}>
+                        <Botoes 
+                            titulo="Profissionais"
+                            ativo={location.pathname === "/Profissionais"}
+                        >
+                            {<FontAwesomeIcon icon="fa-solid fa-user-nurse" className="iconeMenu" />}
+                        </Botoes>
+                    </Link>
+                    <Link to="/Dependentes" style={link}>
+                        <Botoes 
+                            titulo="Dependentes"
+                            ativo={location.pathname === "/Dependentes"}   
+                        >
+                            {<FontAwesomeIcon icon="fa-solid fa-users" className="iconeMenu" />}
+                        </Botoes>
+                    </Link>
+                    <Link to="/Configuracoes" style={link}>
                     <Botoes 
                         titulo="Configurações"
-                        ativo={botaoAtivo === "Configuracoes"} 
-                        onClick={() => setBotaoAtivo("Configuracoes")}
+                        ativo={location.pathname === "/Configuracoes"}   
                     >
                         {<FontAwesomeIcon icon="fa-solid fa-gear"   className="iconeMenu" />}
                     </Botoes>
+                    </Link>
                 </div>
             </div>
         </div>

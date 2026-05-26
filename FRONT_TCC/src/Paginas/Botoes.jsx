@@ -4,11 +4,11 @@ const botao = {
     display:"flex",
     justifyContent:"row",
     alignItems: "center",
-    gap:"10px"
+    gap:"10px",
 }
 
 
-function Botoes({children, titulo, ativo, onClick}){
+function Botoes({children, titulo, ativo}){
    
     return(
         <>
@@ -16,7 +16,6 @@ function Botoes({children, titulo, ativo, onClick}){
                 <button 
                     type='button' 
                     style={botao} 
-                    onClick={onClick} 
                     className={ativo ? "botaoMenuLateral ativo" : "botaoMenuLateral"}
                 > 
                         {children} 
