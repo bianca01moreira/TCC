@@ -11,7 +11,8 @@ function Layout(){
 
     const conteudo = {
         width:"100%",
-        padding:"30px",
+        paddingLeft:"15px",
+        paddingRight:"15px",
         backgroundColor:"#F9FAFB",
         minHeight:"40vh"
     }
