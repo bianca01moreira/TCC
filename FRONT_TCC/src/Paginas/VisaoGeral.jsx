@@ -1,5 +1,6 @@
 import MenuSuperior from "./MenuSuperior"
 import MenuLateral from "./MenuLateral"
+import TituloPagina from "./Componentes/TituloPagina";
 
 function VisaoGeral(){
     
@@ -9,9 +10,9 @@ function VisaoGeral(){
     }
     return(
         <div style={tela}>
-            <div>
-                <h1>Visão Geral</h1>
-            </div>
+            <TituloPagina titulo="Visão geral" descricao="Acompanhe seu tratamento de forma fácil e segura.">
+                Novo Medicamento
+            </TituloPagina>
         </div>
     )
 }
