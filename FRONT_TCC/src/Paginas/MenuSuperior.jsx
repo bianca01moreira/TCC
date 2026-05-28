@@ -1,20 +1,15 @@
 import { height } from '@fortawesome/free-brands-svg-icons/fa11ty'
 import logo from '../assets/imagens/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-function MenuSuperior() {
-    const menuSuperior = {
-        // minWidth: "100vh",
-        // boxSizing: "border-box",
-        // backgroundColor:"#ffffff",
-        // boxShadow: "0px 8px 20px rgba(86, 86, 86, 0.12)", 
-    }   
+function MenuSuperior() {  
     const divSuperior = {
         display:"flex",
         alignItems:"center",
         width: "100%",
         boxSizing: "border-box",
         backgroundColor:"#ffffff",
-        boxShadow: "0px 8px 20px rgba(86, 86, 86, 0.12)", 
+        borderBottom:"1px solid #E5E7EB",
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
     }
     const divAlinhaUsuario ={
         display:"flex",
@@ -73,7 +68,7 @@ function MenuSuperior() {
         alignItems:"center",
     }
     return(
-        <div style={menuSuperior}>
+        <div>
             <div style={divSuperior}>
                 <div style={divLogo}>
                     <img

@@ -8,14 +8,13 @@ const botao = {
     border:"none"
 }
 const divPrincipal = {
-    width:"250px",
+    width:"190px",
+    minWidth:"190px",
     minHeight:"80vh",
     display:"flex",
-    justifyContent:"space-between",
-    width:"100%",
     padding:"5px",
-    backgroundColor:"#ffff",
-    boxShadow: "0px 8px 20px rgba(86, 86, 86, 0.12)", 
+    backgroundColor:"#fff",
+    borderRight:"1px solid #E5E7EB",
 }
 const divSecundaria = {
     display:"flex",
